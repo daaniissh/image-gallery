@@ -18,13 +18,13 @@ const Home = () => {
     getAllImages()
   }, [imgName])
   const getAllImages = async () => {
-    const response = await axios.get("http://localhost:3001/api/images")
+    const response = await axios.get("https://image-gallery-phi-sage.vercel.app/api/images")
     setGetImages(response.data)
   }
   const sendImage = async (image) => {
     const formData = new FormData();
     formData.append("upload_file", image)
-    const response = await axios("http://localhost:3001/api/upload", {
+    const response = await axios("https://image-gallery-phi-sage.vercel.app/api/upload", {
       method: "POST",
       header: { "Content-Type": "multipart/form-data" },
       data: formData,
