@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+.model {
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 2.5px 2.5px 8.5px -2.5px #000000;
+  -moz-box-shadow: 2.5px 2.5px 8.5px -2.5px #000000;
+  box-shadow: 2.5px 2.5px 8.5px -2.5px #000000;
+
+  h1 {
+    @apply absolute -right-3 p-2 cursor-pointer text-base bg-white select-none hover:bg-black/20 duration-75 -top-3 rounded-full font-extrabold capitalize
+  }
+
+  h2 {
+    @apply p-2 text-center cursor-pointer text-base select-none duration-75 font-extrabold text-gray-700
+  }
+
+  .image-console {
+
+    img {
+      @apply w-full mb-11 h-full rounded-lg   object-contain p-2 sm:p-8
+    }
+
+    @apply flex justify-center items-center w-full h-full
+  }
+
+
+  @apply w-[300px] h-[250px] bg-white/95 lg:w-[650px] sm:w-[550px] sm:h-auto lg:max-h-[600px] sm:max-h-[500px] rounded-xl
+}

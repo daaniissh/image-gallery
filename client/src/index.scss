@@ -1,0 +1,123 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Roboto&display=swap');
+
+html {
+  background-color: #e5e5e5;
+}
+
+.image-gallery-container {
+  font-family: 'Roboto', sans-serif;
+
+  h1 {
+
+    @apply text-black font-normal text-[50px] text-center pt-[50px]
+  }
+
+  p {
+    @apply text-[#ACACAC] text-center font-light
+  }
+
+  .image-list-parent {
+    .add-btn {
+      &:hover {
+        @apply border-red-600
+      }
+
+      label {
+        line-height: 35px;
+
+
+        @apply text-center m-auto text-[25px] text-orange-700
+      }
+
+      input {
+        display: none;
+      }
+
+      @apply w-[35px] block h-[35px] border border-[#EED8C0] text-center rounded-full
+    }
+
+
+    @apply flex w-full justify-center mt-[30px]
+  }
+
+  .imageName {
+    @apply mt-2
+  }
+
+  .line-parent {
+    .progress-bar {
+
+      progress::-webkit-progress-bar {
+        background-color: #EED8C0 !important;
+        border-radius: 10px;
+      }
+
+      progress::-webkit-progress-value {
+        background-color: #ff8400 !important;
+        border-radius: 10px;
+      }
+        span{
+          @apply text-gray-500 text-sm
+        }
+      progress {
+
+        @apply w-[300px] sm:w-[400px] md:w-[900px] h-[7px] bg-[#EED8C0] text-center rounded-lg
+      }
+
+      @apply flex items-center gap-[4px] rounded-lg
+    }
+
+
+    @apply w-full flex justify-center mt-4 rounded-lg
+  }
+
+
+  .gallery {
+
+
+    .images {
+
+      img {
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
+
+        @apply max-w-full w-[30%] h-[200px] object-cover
+      }
+
+      @apply max-h-[390px] object-fill overflow-y-scroll mt-2 gap-5 w-full sm:w-[900px] justify-center flex flex-wrap mb-10
+    }
+
+    @apply flex justify-center w-full mt-5
+  }
+
+  @apply bg-[#E5E5E5] w-full h-auto
+}
+
+
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a000 #00000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #81818100;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5f5f5f00;
+  border-radius: 10px;
+  border: 3px solid #aaaaaa00;
+}
